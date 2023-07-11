@@ -6,4 +6,5 @@ function add(a) {
 };
 
 let res = add(5)(2)(4)(-8)();
+
 console.log(res)
