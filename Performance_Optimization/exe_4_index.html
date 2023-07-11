@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Out of DOM reference</title>
+</head>
+<body>
+    <h2>Out of DOM reference</h2>
+    <img src="./assets/tree.jpeg" />
+    <div id="ref1">Reference Element</div>
+
+    <script>
+        var a = document.getElementById("ref1");
+        console.log(a);
+
+        console.log("---------------------------");
+
+        document.body.removeChild(a);
+        // document.body.removeChild(document.getElementById("ref1"));
+        console.log(document.getElementById("ref1"))
+        console.log(a);
+
+        // console.log("---------------------------");
+
+        // a = null;
+        // console.log(document.getElementById("ref1"))
+        // console.log(a);
+    </script>
+</body>
+</html>

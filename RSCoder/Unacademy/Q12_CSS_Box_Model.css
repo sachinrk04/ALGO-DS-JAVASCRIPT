@@ -1,0 +1,18 @@
+.Q12_div {
+    text-align: center;
+    width: 500px;
+    height: 500px;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid black;
+    box-sizing: border-box;
+}
+
+.box-model {
+    background-color: aquamarine;
+    width: 200px;
+    border: 5px solid black;
+    padding: 20px;
+    margin: 20px;
+}

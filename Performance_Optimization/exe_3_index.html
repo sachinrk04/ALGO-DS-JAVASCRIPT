@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+       
+    </script>
+</head>
+<body>
+    <img src="./assets/tree.jpeg" />
+    <button id="button">Click Me</button>
+    <div id="text">Initial Text</div>
+
+    // Method-1
+    <script>
+        var element = document.getElementById("button");
+        var text = document.getElementById("text");
+        
+        function onClick() {
+            console.log("Clicked");
+            text.innerHTML = "text";
+        }
+
+        function addListener() {
+            element.addEventListener('click', onClick, { once: true });
+        }
+        addListener();
+    </script>
+
+    // Method-2
+    <script>
+         var element = document.getElementById("button");
+        var text = document.getElementById("text");
+        
+        function onClick() {
+            console.log("Clicked");
+            text.innerHTML = "text";
+        }
+
+        function removeListener() {
+            element.removeEventListener('click', onClick);
+        }
+
+        function addListener() {
+            removeListener();
+            element.addEventListener('click', onClick);
+        }
+
+        function rerender() {
+            setInterval(() => {
+                addListener();
+            }, 500);
+        }
+
+        rerender();
+    </script>
+</body>
+</html>
