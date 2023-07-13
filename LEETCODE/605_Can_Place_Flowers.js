@@ -1,4 +1,5 @@
 function canPlaceFlowers(flowerbed, n) {
+    if (n === 0) return true;
     let count = 0;
     const length = flowerbed.length;
 
