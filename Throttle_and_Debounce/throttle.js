@@ -18,3 +18,21 @@ function search(e) {
 }
 
 const throttledSearch = throttle(search, 1000);
+
+
+// function throttle(func, wait) {
+//     let timerId; 
+//     let lastArgs;
+//     return function throttled(...args) {
+//         if(!timerId) {
+//             func.apply(this, args)
+//             timerId = setTimeout(() => {
+//             if(lastArgs) {
+//                 func.apply(this, lastArgs)
+//             }
+//             }, wait)
+//         } else {
+//             lastArgs = args
+//         }
+//     }
+// }
