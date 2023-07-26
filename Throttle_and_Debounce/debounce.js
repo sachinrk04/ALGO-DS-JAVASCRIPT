@@ -10,6 +10,7 @@ function debounce(func, delay) {
     };
 }
 
+
 function validateInput(e) {
     fetch(`https://jsonplaceholder.typicode.com/comments?name=${e}`)
         .then(res => res.json())
