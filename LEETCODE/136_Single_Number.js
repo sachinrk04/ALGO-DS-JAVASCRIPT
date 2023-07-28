@@ -10,4 +10,4 @@ function singleNumber(nums) {
 
 const nums = [2,2,1];
 singleNumber(nums);
-// 1
+// output: 1
