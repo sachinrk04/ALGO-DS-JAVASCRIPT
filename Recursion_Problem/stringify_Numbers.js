@@ -27,7 +27,8 @@ let obj = {
     }
 }
 
-stringifyNumbers(obj)
+const outptu = stringifyNumbers(obj);
+console.log("outptu--->", outptu);
 
 /*
 {
