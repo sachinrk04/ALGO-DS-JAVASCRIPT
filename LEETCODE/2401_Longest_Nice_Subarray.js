@@ -1,31 +1,20 @@
 function longestNiceSubarray(nums) {
-    const set = new Set(nums);
-    let result = 0;
+  let result = 0;
+  let usedBits = 0;
+  let j = 0;
 
-    for (const num of nums) {
-        if (set.has(num * 2) || set.has(num / 2)) {
-            let length = 1;
-
-            let next = num * 2;
-            while (set.has(next)) {
-                length++;
-                next *= 2;
-            }
-
-            next = num / 2;
-            while (set.has(next)) {
-                length++;
-                next /= 2;
-            }
-
-            result = Math.max(result, length);
-        }
+  for (let i = 0; i < nums.length; i++) {
+    while ((usedBits & nums[i]) > 0) {
+      usedBits ^= nums[j];
+      j++;
     }
+    usedBits |= nums[i];
+    result = Math.max(result, i - j + 1);
+  }
 
-    return result;
-};
+  return result;
+}
 
-const nums = [1, 3, 2, 2, 3, 1, 4, 7];
-const output = longestNiceSubarray(nums);
-console.log("output--->", output);
-// Output: 5
+const array = [1, 3, 8, 48, 10];
+console.log(longestNiceSubarray(array));
+// Output: 3
