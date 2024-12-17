@@ -1,7 +1,7 @@
 const obj = {
-    a: "one",
-    b: "two",
-    a: "three"
+  a: "one",
+  b: "two",
+  a: "three",
 };
 
-console.log("obj--->", obj)
+console.log("obj--->", obj);

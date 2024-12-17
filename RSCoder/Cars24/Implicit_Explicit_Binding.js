@@ -1,12 +1,12 @@
 var obj = {
-    name: "Sachin",
-    display: () => {
-        console.log(this.name)
-    }
-}
+  name: "Sachin",
+  display: () => {
+    console.log(this.name);
+  },
+};
 
 var obj1 = {
-    name: "ABC",
+  name: "ABC",
 };
 
 // obj.display();
